@@ -1,13 +1,8 @@
 <?php 
 // Template Name: Sobre
 get_header() ?>
-
-		<section class="introducao-interna interna_sobre">
-			<div class="container">
-				<h1>Sobre</h1>
-				<p>conheça mais sobre a bikcraft</p>
-			</div>
-		</section>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php include(get_template_directory() . "/inc/introducao.php") ?>
 
 		<section class="missao_sobre container animar-interno">
 			<div class="grid-10">
@@ -56,4 +51,5 @@ get_header() ?>
 				<cite>WILLIAM MORRIS</cite>
 			</blockquote>
 		</div>
+<?php endwhile; else: endif;?>
 <?php get_footer();?>
