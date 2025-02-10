@@ -5,6 +5,8 @@ get_header(); ?>
 		<section class="introducao">
 			<div class="container">
 				<h1>Bicicletas Feitas a Mão</h1>
+				<!--Onde os campos estão duplicados há mudança com o Custom Field-->
+				<h1><?php the_field_cmb2('intro_title') ?></h1>
 				<blockquote class="quote-externo">
 					<p>“não tenha nada em sua casa que você não considere útil ou acredita ser bonito”</p>
 					<cite>WILLIAM MORRIS</cite>
